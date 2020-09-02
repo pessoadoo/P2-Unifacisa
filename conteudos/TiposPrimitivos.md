@@ -10,11 +10,11 @@ Conteúdo sobre tipos primitivos.
 **Decimais** é possível se perceber que o bit que está mais a esquerda sempre é usado para determinar se o número é
 positivo(0) ou negativo(1).
 - 1 bit
-- 1 byte ==> 8 bits
-- 1 kilobyte ==> 1000 bytes
-- 1 megabyte ==> 1000000 bytes
-- 1 gigabyte ==> 1000000000 bytes
-- 1 terabyte ==> 1000000000000 bytes
+- 1 byte -> 8 bits
+- 1 kilobyte -> 1000 bytes
+- 1 megabyte -> 1000000 bytes
+- 1 gigabyte -> 1000000000 bytes
+- 1 terabyte -> 1000000000000 bytes
 
 ## Para converter um número binário para decimal...
  43210
