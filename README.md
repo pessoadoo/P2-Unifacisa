@@ -7,3 +7,5 @@ Repositório que aborda conteúdo da disciplina P2 da Unifacisa, aqui são abord
 [1 - Tipos primitivos](conteudos/TiposPrimitivos.md)
 
 [2 - Operadores](conteudos/Operadores.md)
+
+[3 - Estruturas Condicionais](conteudos/EstruturasCondicionais.md)
