@@ -67,7 +67,8 @@ positivo(0) ou negativo(1).
 ## Tipos Textuais
 - **char**:
   - É utilizado para armazenar um caractere, como: 'a','b',...,'z'; Ele é armazenado em 2 bytes.
--**String**:
+  
+- **String**:
   - Não é um Tipo Primitivo (é um OBJETO), mas pode ser utilizado como o mesmo.
   - Ele armazena textos entre aspas duplas, como: "Gabriel", "P2".
   
