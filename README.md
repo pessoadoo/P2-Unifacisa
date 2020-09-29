@@ -14,4 +14,6 @@ Repositório que aborda conteúdo da disciplina P2 da Unifacisa, aqui são abord
 
 [5 - Classes e Objetos](conteudos/ClassesObjetos.md)
 
+  [5.1 - Variáveis e Métodos de Instância e de Classe]
+  
 [Comandos Git](conteudos/ComandosGit.md)
