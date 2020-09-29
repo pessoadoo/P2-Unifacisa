@@ -12,4 +12,6 @@ Repositório que aborda conteúdo da disciplina P2 da Unifacisa, aqui são abord
 
 [4 - Estruturas de Repetição](conteudos/EstruturasRepetição.md)
 
+[5 - Classes e Objetos](conteudos/ClassesObjetos.md)
+
 [Comandos Git](conteudos/ComandosGit.md)
