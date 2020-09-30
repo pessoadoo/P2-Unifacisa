@@ -87,48 +87,48 @@ da refeição, é possível cria-lo. Pois o que diferencia qual é o construtor 
 instânciação do objeto.
 ```java
 class Refeicao{
-	      String nome;
-	      String carboidrato;
-	      int gramasCarboidrato;
-	      String proteina;
-	      int gramasProteina;
-	      int tempoCozimento; 
-	      double preco; 
+	String nome;
+	String carboidrato;
+	int gramasCarboidrato;
+	String proteina;
+	int gramasProteina;
+	int tempoCozimento; 
+	double preco; 
 	
-  	    public Refeicao(){ }
+  	public Refeicao(){ }
   
-  	    public Refeicao(String nome, String carboidrato, int gramasCarboidrato, String proteina, int gramasProteina, int tempoCozimento, double preco){
-		            this.nome = nome;
-    		        this.carboidrato = carboidrato;
-		            this.gramasCarboidrato = gramasCarboidrato;
-		            this.proteina = proteina;
-		            this.gramasProteina = gramasProteina;
-		            this.tempoCozimento = tempoCozimento;
-		            this.preco = preco;
+  	public Refeicao(String nome, String carboidrato, int gramasCarboidrato, String proteina, int gramasProteina, int tempoCozimento, double preco){
+		this.nome = nome;
+    		this.carboidrato = carboidrato;
+		this.gramasCarboidrato = gramasCarboidrato;
+		this.proteina = proteina;
+		this.gramasProteina = gramasProteina;
+		this.tempoCozimento = tempoCozimento;
+		this.preco = preco;
         }
   
         public Refeicao(String carboidrato, String proteina){
                 this.carboidrato = carboidrato;
                 this.proteina = proteina;
                 this.nome = carboidrato + " com " + proteina;
-	      }
+        }
 }
 
 class MainRefeicao{
-	      public static void main(String [] args){
-                Refeicao almoco1 = new Refeicao();
-                almoco1.nome = "cuzcuz com ovo";
-                almoco1.carboidrato = "cuzcuz";
-                almoco1.gramasCarboidrato = 120;
-                almoco1.proteina = "ovo";
-                almoco1.gramasProteina = 60;
-                almoco1.tempoCozimento = 20;
-                almoco1.preco = 10;
+	public static void main(String [] args){
+		Refeicao almoco1 = new Refeicao();
+		almoco1.nome = "cuzcuz com ovo";
+		almoco1.carboidrato = "cuzcuz";
+		almoco1.gramasCarboidrato = 120;
+		almoco1.proteina = "ovo";
+		almoco1.gramasProteina = 60;
+		almoco1.tempoCozimento = 20;
+		almoco1.preco = 10;
 
-    		        Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
-		            Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
-		            Refeicao cafeDaManha = new Refeicao("pao", "ovo");
-  	    }
+		Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
+		Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
+		Refeicao cafeDaManha = new Refeicao("pao", "ovo");
+        }
 }
 ```
   Vale ressaltar que é possível que um construtor utilize o mesmo código de outro construtor existente, assim ele estará evitando uma duplicação do código. Um exemplo prático
@@ -144,9 +144,9 @@ class Refeicao{
         int tempoCozimento; 
         double preco; 
   
-  	    public Refeicao(){ }
+  	public Refeicao(){ }
   
-  	    public Refeicao(String nome, String carboidrato, int gramasCarboidrato, String proteina, int gramasProteina, int tempoCozimento, double preco){
+  	public Refeicao(String nome, String carboidrato, int gramasCarboidrato, String proteina, int gramasProteina, int tempoCozimento, double preco){
                 this.nome = nome;
                 this.carboidrato = carboidrato;
                 this.gramasCarboidrato = gramasCarboidrato;
@@ -154,15 +154,15 @@ class Refeicao{
                 this.gramasProteina = gramasProteina;
                 this.tempoCozimento = tempoCozimento;
                 this.preco = preco;
-	      }
+	}
   
-  	    public Refeicao(String carboidrato, String proteina){
-		            this(carboidrato+" com "+proteina, carboidrato, 120, proteina, 60, 20, 10);
-	      }
+  	public Refeicao(String carboidrato, String proteina){
+		this(carboidrato+" com "+proteina, carboidrato, 120, proteina, 60, 20, 10);
+	}
 }
 class MainRefeicao{
-	      public static void main(String [] args){
-                Refeicao almoco1 = new Refeicao();
+	public static void main(String [] args){
+		Refeicao almoco1 = new Refeicao();
                 almoco1.nome = "cuzcuz com ovo";
                 almoco1.carboidrato = "cuzcuz";
                 almoco1.gramasCarboidrato = 120;
@@ -171,16 +171,19 @@ class MainRefeicao{
                 almoco1.tempoCozimento = 20;
                 almoco1.preco = 10;
 
-    		        Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
-		            Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
-		            Refeicao cafeDaManha = new Refeicao("pao", "ovo");
-  	    }
+    		Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
+		Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
+		Refeicao cafeDaManha = new Refeicao("pao", "ovo");     
+                       
+  	}
 }
 ```
   Para que seja possível retornar a representação textutal do objeto, é utilizado uma função chamada de **toString**. Ou seja, com essa função será possível visualizar o valor
 das variáveis no terminal, por exemplo. Pois quando se chama a função **System.out.println()** tendo sua variável de referência a um objeto qualquer, a JVM irá executar o **toString()** referente aquele objeto chamado na funçao de print. O exemplo abaixo irá demonstrar isso de forma prática:
 ```java
-class Refeicao{                                                          // variáveis de instância
+class Refeicao{
+
+        // variáveis de instância (objetos)
         String nome;    
         String carboidrato;
         int gramasCarboidrato;
@@ -188,10 +191,11 @@ class Refeicao{                                                          // vari
         int gramasProteina;
         int tempoCozimento; 
         double preco; 
+	
+	// construtor padrão (default)
+  	public Refeicao(){ }                                                
   
-  	    public Refeicao(){ }                                              // construtor padrão (default)
-  
-  	    // construtor com argumentos
+  	// construtor com argumentos                                                                    
         public Refeicao(String nome, String carboidrato, int gramasCarboidrato, String proteina, int gramasProteina, int tempoCozimento, double preco){
                 this.nome = nome;
                 this.carboidrato = carboidrato;                         
@@ -200,17 +204,19 @@ class Refeicao{                                                          // vari
                 this.gramasProteina = gramasProteina;
                 this.tempoCozimento = tempoCozimento;
                 this.preco = preco;
-	      }
-  
-  	    public Refeicao(String carboidrato, String proteina){              // construtor possuindo 2 strings como argumentos
-		            this(carboidrato + " com " + proteina, carboidrato, 120, proteina, 60, 20, 10);
-	      }
-        
-        public String toString() {                                         // função que irá retornar os valores dos atributos em forma de string
+	}
+	
+	// construtor possuindo 2 strings como argumentos
+  	public Refeicao(String carboidrato, String proteina){                
+		this(carboidrato + " com " + proteina, carboidrato, 120, proteina, 60, 20, 10);
+	}
+       
+        // função que irá retornar os valores dos atributos em forma de string
+        public String toString() {                                           
                 String output = "";
                 output += "Nome: " + this.nome + "\n";
                 output += "Carboidrato: " + this.carboidrato + "\n";
-		            output += "Gramas carboidrato: " + this.gramasCarboidrato + "\n";
+		output += "Gramas carboidrato: " + this.gramasCarboidrato + "\n";
                 output += "Proteina: " + this.proteina + "\n";
                 output += "Gramas proteina: " + this.gramasProteina + "\n";
                 output += "Tempo de cozimento: " + this.tempoCozimento + "\n";
@@ -219,7 +225,7 @@ class Refeicao{                                                          // vari
         }
 }
 class MainRefeicao{
-	      public static void main(String [] args){
+	public static void main(String [] args){
                 Refeicao almoco1 = new Refeicao();
                 almoco1.nome = "cuzcuz com ovo";
                 almoco1.carboidrato = "cuzcuz";
@@ -229,15 +235,15 @@ class MainRefeicao{
                 almoco1.tempoCozimento = 20;
                 almoco1.preco = 10;
 
-    		        Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
-		            Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
-		            Refeicao cafeDaManha = new Refeicao("pao", "ovo");
+    		Refeicao almoco2 = new Refeicao("cuzcuz com ovo", "cuzcuz", 120, "ovo", 60, 20, 10);
+		Refeicao jantar = new Refeicao("arroz com carne", "arroz", 80, "carne", 100, 30, 15);
+		Refeicao cafeDaManha = new Refeicao("pao", "ovo");
                 
                 System.out.println(almoco1);
-		            System.out.println(almoco2);
-		            System.out.println(jantar);
-		            System.out.println(cafeDaManha);
-  	    }
+		System.out.println(almoco2);
+		System.out.println(jantar);
+		System.out.println(cafeDaManha);      
+        }
 }
 ```
   Dessa forma, utilizando classes e objetos com seus respectivos atributos, construtores e funções é possível construir programas que possam representar de alguma forma
